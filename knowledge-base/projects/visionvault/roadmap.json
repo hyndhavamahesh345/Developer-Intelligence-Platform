@@ -1,0 +1,22 @@
+{
+  "project_id": "visionvault",
+  "segment": "roadmap",
+  "title": "VisionVault Feature Roadmap",
+  "phases": [
+    {
+      "quarter": "Q3 2026",
+      "milestone": "Custom Fine-Tuning Support",
+      "details": "Implement Low-Rank Adaptation (LoRA) pipelines for Florence-2 to adapt captioning outputs to custom corporate domains (e.g. medical tools, specialized factory machinery)."
+    },
+    {
+      "quarter": "Q4 2026",
+      "milestone": "Edge-Deployment Hubs",
+      "details": "Develop native executable builds for Nvidia Jetson Orin Nano modules to run local vision pipelines directly on cheap edge hardware."
+    },
+    {
+      "quarter": "Q1 2027",
+      "milestone": "Live Web3 Streams",
+      "details": "Integrate decentralized stream protocols (e.g., Livepeer) to guarantee end-to-end encrypted distribution of video feeds."
+    }
+  ]
+}

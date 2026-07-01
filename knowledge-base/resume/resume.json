@@ -1,0 +1,31 @@
+{
+  "profile": {
+    "name": "N Hyndhava Mahesh",
+    "title": "Principal AI Systems & Full-Stack Engineer",
+    "email": "mahesh.nh@gmail.com",
+    "phone": "+91 98765 43210",
+    "location": "Hyderabad, India",
+    "github": "https://github.com/nhmahesh",
+    "linkedin": "https://linkedin.com/in/nhmahesh",
+    "website": "https://nhmahesh.dev",
+    "summary": "Full-stack software architect specializing in agentic AI orchestrations, distributed computer vision pipelines, and high-performance vector databases. Dedicated to building commercially viable products utilizing 100% open-source models and self-hosted deployments."
+  },
+  "education": [
+    {
+      "institution": "Indian Institute of Technology (IIT), Hyderabad",
+      "degree": "B.Tech in Computer Science and Engineering",
+      "gpa": "9.4/10.0",
+      "period": "2021 - 2025",
+      "courses": [
+        "Advanced Machine Learning",
+        "Distributed Computing Systems",
+        "Computer Vision",
+        "Database Architecture"
+      ]
+    }
+  ],
+  "certifications": [
+    "Nvidia Deep Learning Institute — Computer Vision for Industrial Inspection",
+    "ChromaDB Certified Vector Architect"
+  ]
+}

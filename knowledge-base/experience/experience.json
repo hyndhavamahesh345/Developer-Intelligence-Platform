@@ -1,0 +1,37 @@
+[
+  {
+    "company": "NeuralLabs AI",
+    "role": "AI Systems Engineer Intern",
+    "period": "June 2024 - April 2025",
+    "location": "Bengaluru, India (Remote)",
+    "description": "Led the development and optimization of local vision-language workflows for industrial inspections.",
+    "highlights": [
+      "Reduced cloud model reliance by 100% by migrating vision classification pipelines to fine-tuned Florence-2 models hosted on local clusters.",
+      "Engineered high-throughput batching engines that accelerated image annotation pipelines by 3.5x.",
+      "Configured multi-tenant vector searches with ChromaDB, maintaining sub-15ms metadata query responses over million-record tables."
+    ]
+  },
+  {
+    "company": "AlphaTech Solutions",
+    "role": "Full-Stack Software Engineer Intern",
+    "period": "October 2023 - May 2024",
+    "location": "Hyderabad, India",
+    "description": "Architected low-latency administration panels and metrics dashboards for hardware monitoring systems.",
+    "highlights": [
+      "Constructed React+Vite SPA dashboard using WebSocket channels to stream live system CPU/RAM and database queue state in real-time.",
+      "Re-engineered FastAPI database interaction logic using SQLAlchemy async sessions, increasing concurrent request limits by 2.2x.",
+      "Created containerized local development scripts using Docker Compose to orchestrate frontend, backend, PostgreSQL, and Redis cache modules."
+    ]
+  },
+  {
+    "company": "IIT Hyderabad Machine Learning Club",
+    "role": "Technical Coordinator & Lead Developer",
+    "period": "September 2022 - May 2024",
+    "location": "IIT Hyderabad",
+    "description": "Organized workshops, managed open-source contributions, and led developer teams for regional hackathons.",
+    "highlights": [
+      "Won 1st place in Smart City Hackathon 2023 by building a computer-vision based vehicle volume controller using YOLOv8 and FastAPI.",
+      "Conducted developer bootcamps covering Git workflows, Docker deployment, and FastAPI integration, training over 150+ student developers."
+    ]
+  }
+]

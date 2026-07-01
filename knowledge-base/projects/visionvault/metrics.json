@@ -1,0 +1,16 @@
+{
+  "project_id": "visionvault",
+  "segment": "metrics",
+  "title": "VisionVault Performance Benchmarks & KPIs",
+  "performance_metrics": {
+    "detection_accuracy_mAP": "91.4% (Grounding DINO)",
+    "captioning_ROUGE_L": "84.2% (Florence-2 Dense Captioning)",
+    "average_latency_per_frame": "42ms (Inference) + 8ms (Network / WebSockets)",
+    "max_concurrent_streams": "12 streams (1080p, 30 FPS on a single Nvidia RTX 4090)",
+    "database_query_latency": "12ms (average search return time for semantic querying over 100k keyframes)"
+  },
+  "operational_impact": [
+    "Reduced storage footprints by 70% due to dynamic delta-frame caching compared to 24/7 raw video archiving.",
+    "Automated alerts are triggered within 500ms of anomaly detection (e.g., restricted area entrance)."
+  ]
+}

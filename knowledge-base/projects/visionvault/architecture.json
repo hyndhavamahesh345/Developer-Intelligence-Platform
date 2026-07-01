@@ -1,0 +1,20 @@
+{
+  "project_id": "visionvault",
+  "segment": "architecture",
+  "title": "VisionVault System Architecture",
+  "architecture_type": "Distributed Microservices",
+  "components": {
+    "Ingestion Gateway": "FastAPI WebSocket gateway handling H.264 frame ingestion and clients connections.",
+    "Message Broker": "Redis Queue managing frame distribution to Vision worker pools, acting as a rate limiter and buffer.",
+    "Inference Engine": "Dockerized Python workers hosting Florence-2 and Grounding DINO, utilizing TensorRT runtime compilation for GPU acceleration.",
+    "Vector Database": "ChromaDB indexing spatial/text features extracted from video frames for semantic natural language video search.",
+    "Storage": "MinIO S3-compatible store caching keyframes, events metadata saved in PostgreSQL."
+  },
+  "data_flow": [
+    "IP Camera streams H.264 frames to FastAPI Gateway via WebSocket.",
+    "Gateway downsamples frames and pushes them into Redis stream queues.",
+    "Worker instances dequeue frames and run concurrent inference using Grounding DINO for tracking and Florence-2 for captioning.",
+    "Extracted text descriptions are embedded using all-MiniLM-L6-v2 and stored in ChromaDB alongside coordinates.",
+    "Client dashboard receives live detections and bounding boxes via client WebSockets."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "project_id": "visionvault",
+  "segment": "overview",
+  "title": "VisionVault: Edge AI Vision Platform",
+  "summary": "An enterprise-grade platform for real-time visual object recognition, tracking, and video intelligence, running on open-source edge models.",
+  "description": "VisionVault is a distributed computer vision intelligence engine designed to process multiple high-definition video streams concurrently. By integrating Florence-2 for dense image captioning and Grounding DINO for zero-shot detection, it provides sub-100ms analytics and spatial mapping. It is designed to act as an operations and security intelligence hub for smart retail and manufacturing environments.",
+  "features": [
+    "Multi-stream real-time object tracking",
+    "Zero-shot open-vocabulary detection using Grounding DINO",
+    "Dense vision-to-text image captioning using Florence-2",
+    "Edge-optimized deployment via Docker container orchestration",
+    "Vector-based video query interface"
+  ],
+  "tech_stack": [
+    "React",
+    "TypeScript",
+    "FastAPI",
+    "Florence-2",
+    "Grounding DINO",
+    "Redis",
+    "Docker",
+    "ChromaDB"
+  ]
+}

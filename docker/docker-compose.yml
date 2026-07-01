@@ -1,0 +1,57 @@
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: ai_portfolio_db
+    restart: always
+    environment:
+      POSTGRES_USER: portfolio_user
+      POSTGRES_PASSWORD: portfolio_secure_pass_2026
+      POSTGRES_DB: portfolio_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U portfolio_user -d portfolio_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  chroma:
+    image: chromadb/chroma:latest
+    container_name: ai_portfolio_chroma
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - chroma_data:/chroma/chroma
+    environment:
+      - ANONYMIZED_TELEMETRY=False
+      - ALLOW_RESET=True
+
+  backend:
+    build:
+      context: ../
+      dockerfile: docker/backend.Dockerfile
+    container_name: ai_portfolio_backend
+    restart: always
+    ports:
+      - "8008:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+      chroma:
+        condition: service_started
+    environment:
+      - DATABASE_URL=postgresql://portfolio_user:portfolio_secure_pass_2026@db:5432/portfolio_db
+      - CHROMA_HOST=chroma
+      - CHROMA_PORT=8000
+      - LLM_PROVIDER=ollama
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  postgres_data:
+  chroma_data:

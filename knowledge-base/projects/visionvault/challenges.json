@@ -1,0 +1,22 @@
+{
+  "project_id": "visionvault",
+  "segment": "challenges",
+  "title": "Technical Challenges & Solutions in VisionVault",
+  "challenges": [
+    {
+      "issue": "Inference Latency Bottleneck",
+      "impact": "Concurrent processing of multiple 30 FPS streams caused memory overflows on a single RTX 4090.",
+      "solution": "Implemented keyframe delta comparison. Frames are only sent to the inference worker if the pixel-wise difference exceeds 12%. Created an execution batch size of 8 on Florence-2 to maximize GPU core utilization."
+    },
+    {
+      "issue": "Zero-Shot Coordinate Drift",
+      "impact": "Grounding DINO bounding box predictions drifted during rapid movements.",
+      "solution": "Coupled Grounding DINO with ByteTrack (a lightweight multi-object tracking algorithm). Grounding DINO runs every 5th frame, and ByteTrack handles tracking in between, reducing GPU compute requirements by 80%."
+    },
+    {
+      "issue": "Embedding Search Overhead",
+      "impact": "Queries on millisecond video frames degraded performance as the database scaled.",
+      "solution": "Partitioned ChromaDB collections by hourly chunks. Queries are localized based on chronological metadata filters before running vector similarities."
+    }
+  ]
+}

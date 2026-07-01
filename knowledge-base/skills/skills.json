@@ -1,0 +1,43 @@
+{
+  "domains": [
+    {
+      "name": "Machine Learning & AI Engineering",
+      "skills": [
+        { "name": "LangGraph Orchestration", "level": "Expert", "percentage": 95 },
+        { "name": "Local LLM Fine-Tuning & Quantization", "level": "Advanced", "percentage": 90 },
+        { "name": "Computer Vision (Florence-2, DINO, YOLO)", "level": "Expert", "percentage": 95 },
+        { "name": "Vector Databases (ChromaDB, PgVector)", "level": "Expert", "percentage": 92 },
+        { "name": "Embeddings & Rerankers (BGE-M3, MiniLM)", "level": "Advanced", "percentage": 88 }
+      ]
+    },
+    {
+      "name": "Backend Development",
+      "skills": [
+        { "name": "Python & FastAPI", "level": "Expert", "percentage": 96 },
+        { "name": "Asynchronous SQLAlchemy", "level": "Expert", "percentage": 92 },
+        { "name": "PostgreSQL Database Design", "level": "Advanced", "percentage": 88 },
+        { "name": "Redis caching & pub-sub streams", "level": "Advanced", "percentage": 85 },
+        { "name": "WebSocket Real-time Connections", "level": "Expert", "percentage": 94 }
+      ]
+    },
+    {
+      "name": "Frontend Architecture",
+      "skills": [
+        { "name": "React & TypeScript", "level": "Expert", "percentage": 95 },
+        { "name": "Vite & Build Optimization", "level": "Expert", "percentage": 92 },
+        { "name": "Tailwind CSS & Premium UI design", "level": "Expert", "percentage": 94 },
+        { "name": "Motion (Framer Motion) animations", "level": "Expert", "percentage": 90 },
+        { "name": "React Three Fiber & 3D canvases", "level": "Advanced", "percentage": 80 }
+      ]
+    },
+    {
+      "name": "DevOps & Cloud Orchestration",
+      "skills": [
+        { "name": "Docker & Multi-stage container builds", "level": "Expert", "percentage": 92 },
+        { "name": "Docker Compose Multi-service setups", "level": "Expert", "percentage": 95 },
+        { "name": "GitHub Actions (CI/CD Automations)", "level": "Advanced", "percentage": 85 },
+        { "name": "Linux Shell scripting & admin", "level": "Advanced", "percentage": 82 }
+      ]
+    }
+  ]
+}
